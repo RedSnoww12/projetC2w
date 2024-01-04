@@ -1,0 +1,35 @@
+.container-all{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-family: var(--font-primary);
+}
+.container-card{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  background-color: var(--color-accent);
+  width: 250px;
+  height: 120px;
+  border-radius: 10px;
+}
+.container-supp{
+  display: flex;
+}
+.supprimer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+
+}
+.supprimer:hover{
+  background-color: var(--color-accent);
+  box-shadow: 0 0 10px var(--color-primary);
+}

@@ -1,0 +1,83 @@
+<div>
+  <h1 class="center">Inscription</h1>
+  <div class="divider"></div>
+  <div class="section">
+    <p class="center">Veuillez renseigner les champs ci-dessous pour vous inscrire.</p>
+</div>
+
+<form #registerForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="card-panel">
+
+          <!-- Username -->
+          <div class="form-group">
+            <label for="username">Nom</label>
+            <input type="text" class="form-control" id="username"
+                    required
+                    pattern="^[a-zA-Z0-9àéèç]{1,25}$"
+                   [(ngModel)]="user.username" name="username"
+                   #username="ngModel">
+
+            <div [hidden]="username.valid || username.pristine"
+                  class="card-panel red accent-1">
+                  Le login est requis.
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password"
+                    required
+                   [(ngModel)]="user.password" name="password"
+                   #password="ngModel">
+
+             <div [hidden]="password.valid || password.pristine"
+                   class="card-panel red accent-1">
+                   Le password est requis.
+             </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email"
+                    required
+                    pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$"
+                   [(ngModel)]="user.email" name="email"
+                   #email="ngModel">
+
+            <div [hidden]="email.valid || email.pristine"
+                  class="card-panel red accent-1">
+                  L'email est requis.
+            </div>
+          </div>
+
+          <!-- Adresse -->
+          <div class="form-group">
+            <label for="adresse">Adresse</label>
+            <input type="text" class="form-control" id="adresse"
+                    required
+                   [(ngModel)]="user.Adresse" name="adresse"
+                   #adresse="ngModel">
+
+            <div [hidden]="adresse.valid || adresse.pristine"
+                  class="card-panel red accent-1">
+                  L'adresse est requise.
+            </div>
+          </div>
+
+          <!-- Submit button -->
+          <div class="divider"></div>
+          <div class="section center">
+            <button type="submit"
+              class="waves-effect waves-light btn"
+              [disabled]="!registerForm.form.valid">
+              Valider</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </form>

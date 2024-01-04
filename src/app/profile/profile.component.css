@@ -1,0 +1,85 @@
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+.groupe-boutton-profile{
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+
+}
+.boutton-profile{
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: var(--text-color);
+
+}
+.boutton-profile:hover{
+  background-color: var(--color-accent);
+  box-shadow: 3px 3px 10px 10px rgba(0,0,0,0.15);
+}
+.container{
+  display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    background-color: var(--color-accent);
+    width: 50%;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.15);
+    color: var(--text-color);
+}
+.container input{
+  color: var(--text-color);
+}
+

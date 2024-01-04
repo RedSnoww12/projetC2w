@@ -1,0 +1,34 @@
+
+<div class="container-title">
+  <h1>Produits du User</h1>
+  </div>
+
+
+    <div *ngIf="Products" class="container-all">
+      <div *ngFor="let product of Products">
+        <div class="container-product" (click)="toModif(product)" appBorderCard>
+          <!-- <div class="card-image">
+            <img [src]="product.picture" />
+          </div> -->
+
+          <div class="container-txt">
+            <div>
+              <p>{{ product.name }}</p>
+
+              <p>
+                <small>{{ product.price }} $</small>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container-icones">
+      <button class="btn-icones" (click)="goBack()">+</button>
+
+  </div>
+
+  <h3 *ngIf="!Products">
+    <app-loader></app-loader>
+  </h3>

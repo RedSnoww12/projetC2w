@@ -1,0 +1,40 @@
+
+<form #registerForm="ngForm" (ngSubmit)="save()">
+  <div class="container">
+    <div class="title-profile">
+      <h4>Products Create</h4>
+    </div>
+    <div class="container-form">
+      <div>
+      <div><label>Name</label><input class="input-profile" type="text"
+        [(ngModel)]="product.name" name="username"
+                     #name="ngModel">
+                     <div [hidden]="name.valid || name.pristine"
+                     class="card-panel red accent-1">
+                     Le Name est requis.
+               </div></div>
+    </div>
+    <div>
+      <div><label>Price</label><input type="text" class="input-profile"
+        [(ngModel)]="product.price" name="email"
+                     #price="ngModel">
+                     <div [hidden]="price.valid || price.pristine"
+                     class="card-panel red accent-1">
+                     Le Price est requis.
+               </div>
+      </div>
+    </div>
+    <div class="groupe-boutton-profile">
+      <div>
+              <button type="submit"
+                class="boutton-profile"
+                [disabled]="!registerForm.form.valid">
+                Valider</button>
+              </div>
+              <div>
+                <button class="boutton-profile" (click)="goBack()">Retour</button>
+              </div>
+    </div>
+  </div>
+  </div>
+  </form>

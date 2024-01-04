@@ -1,0 +1,36 @@
+<!-- Admin dashboard -->
+<div class="container-all">
+<h1>Admin Dashboard</h1>
+<div class="container-card">
+  <div>
+    <div *ngFor="let client of lstUser">
+      <div  appBorderCard >
+        <div (click)="goToDetail(client)">
+          <div>
+            <p>{{ client.username }}</p>
+
+            <p>
+              <small>{{ client.email }}</small>
+            </p>
+          </div>
+        </div>
+        <div class="container-supp">
+        <button class="supprimer"
+          (click)="deleteUser(client)">
+          <i>supprimer</i>
+        </button>
+      </div>
+
+          <!-- <button (click) = "goToDetail(client)" class="btn-floating halfway-fab waves-effect waves-light red">
+            <i class="material-icons">add</i>
+          </button> -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<h3 *ngIf="lstUser == []" class="center" >
+<app-loader></app-loader>
+</h3>
+</div>

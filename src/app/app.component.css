@@ -1,0 +1,18 @@
+.navbar-all{
+  background-color: var(--color-accent);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var( --font-primary);
+  font-size: 1.7em;
+
+}
+.navbar-all a{
+  color: var(--text-color);
+  text-decoration: none;
+  margin-right: 20px;
+}
+

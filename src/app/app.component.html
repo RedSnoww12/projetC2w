@@ -1,0 +1,31 @@
+
+  <div>
+
+        <nav class="navbar-all">
+          <div class="logo-nav">
+            <a href="#">Logo</a>
+          </div>
+        <div class="div-nav">
+          <ul>
+            <li><a (click)="products()">Liste des Produits</a></li>
+            <li *ngIf="isAdmin()"><a (click)="dashboard()">Dashboard</a></li>
+            <li *ngIf="!isLoggedIn()"><a (click)="register()" >Register</a></li>
+            <li *ngIf="!isLoggedIn()"><a (click)="login()" >Login</a></li>
+            <li *ngIf="isLoggedIn()"><a (click)="profile()">Profile</a></li>
+            <li *ngIf="isLoggedIn()"><a (click)="logout()">Logout</a></li>
+          </ul>
+
+        </div>
+        <div class="switch">
+          <label>
+            <input type="checkbox" (click)="toggleDarkTheme()">
+            <span class="lever"></span>
+          </label>
+        </div>
+
+</nav>
+
+</div>
+
+
+  <router-outlet></router-outlet>

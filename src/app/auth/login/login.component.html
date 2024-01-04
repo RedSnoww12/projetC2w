@@ -1,0 +1,54 @@
+<form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="container-all">
+      <div class="title-co">
+        <h1>Connexion</h1>
+
+      <div>
+
+        <div>
+          <!-- Username -->
+          <div>
+            <label>Nom</label>
+            <input type="text" id="username"
+                    required
+                    pattern="^[a-zA-Z0-9àéèç]{1,25}$"
+                   [(ngModel)]="form.username" name="username"
+                   #username="ngModel">
+
+                   <div class="comp-log" >
+                    <small [hidden]="username.valid || username.pristine" class="small-div" >
+                      Le login est requis.
+                    </small>
+                   </div>
+
+          </div>
+
+
+          <!-- Password -->
+          <div>
+            <label for="password">Password</label>
+            <input type="password"id="password"
+                    required
+                   [(ngModel)]="form.password" name="password"
+                   #password="ngModel">
+
+             <div  class="comp-pass">
+              <small [hidden]="password.valid || password.pristine">
+                   Le password est requis.
+                  </small>
+             </div>
+          </div>
+
+          <!-- Submit button -->
+          <div ></div>
+          <div class="container-boutton">
+            <button class="boutton" type="submit"
+              [disabled]="!loginForm.form.valid">
+              Valider</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </form>

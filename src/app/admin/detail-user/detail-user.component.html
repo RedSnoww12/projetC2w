@@ -1,0 +1,32 @@
+<div *ngIf="user" class="row">
+    <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{ user.username }}</h2>
+    <div class="card horizontal hoverable deep-purple lighten-2 z-depth-4">
+      <!-- <div class="card-image">
+        <img [src]="user.picture">
+      </div> -->
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+              <tr>
+                <td>Email</td>
+                <td><strong>{{ user.email }}</strong></td>
+              </tr>
+              <tr>
+                <td>Adresse</td>
+                <td><strong>{{ user.Adresse }}</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-action">
+          <a class="retr" (click)="goBack()">Retour</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <h4 *ngIf='!user' class="center">
+      <app-loader></app-loader>
+    </h4>

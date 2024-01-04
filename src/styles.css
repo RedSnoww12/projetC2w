@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --text-color: rgb(61, 61, 61);
+  --color-primary: #8896AB;
+  --color-accent: #C5D5E4;
+  --btn-color : #8896AB;
+  --btn-txt-color : #000;
+  --font-primary:'Times New Roman', Times, serif;
+  --placeholder-color: #000000;
+}
+
+body {
+  background-color: var(--color-primary);
+
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+body.dark-theme {
+
+  --color-primary: #35393C;
+  --color-accent: #466362;
+  --font-primary:'Times New Roman', Times, serif;
+  --text-color: rgb(255, 255, 255);
+  --btn-color : #48494A;
+  --btn-txt-color : rgb(255, 255, 255);
+  --placeholder-color: #ffffff;
+}
+
+

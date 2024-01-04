@@ -1,0 +1,45 @@
+<form #registerForm="ngForm" (ngSubmit)="save()">
+<div class="container">
+  <div class="title-profile">
+    <h4>Profile Settings</h4>
+  </div>
+  <div>
+    <div>
+    <div><label>Username</label><input class="input-profile" type="text" placeholder="first name" value="{{me.username}}"
+      [(ngModel)]="updatedUser.username" name="username"
+                   #username="ngModel">
+                   <div [hidden]="username.valid || username.pristine"
+                   class="card-panel red accent-1">
+                   Le username est requis.
+             </div></div>
+  </div>
+  <div>
+    <div><label>Email</label><input type="text" class="input-profile" placeholder="enter email" value="{{me.email}}"
+      [(ngModel)]="updatedUser.email" name="email"
+                   #email="ngModel">
+                   <div [hidden]="email.valid || email.pristine"
+                   class="card-panel red accent-1">
+                   Le email est requis.
+             </div>
+    </div>
+    <div><label>Address Line 1</label><input type="text" class="input-profile" placeholder="enter address line 1" value="{{me.Adresse}}"
+      [(ngModel)]="updatedUser.Adresse" name="Adresse"
+                   #Adresse="ngModel">
+                   <div [hidden]="Adresse.valid || Adresse.pristine"
+                   class="card-panel red accent-1">
+                   Le Adresse est requis.
+             </div></div>
+  </div>
+  <div class="groupe-boutton-profile">
+          <div class="section center">
+            <button type="submit"
+              class="boutton-profile"
+              [disabled]="!registerForm.form.valid">
+              Valider</button>
+          </div>
+    <div (click)="changePassword()"><button class="boutton-profile" type="button">Change password</button></div>
+    <div (click)="toProducts()">produit</div>
+  </div>
+</div>
+</div>
+</form>

@@ -1,0 +1,37 @@
+<div *ngIf="product" class="container-all">
+    <div>
+      <div class="container-title-prod">
+    <h2 class="title-prod">{{ product.name }}</h2>
+  </div>
+    <div class="container-card">
+      <div>
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <td>Nom</td>
+                <td><strong>{{ product.name }}</strong></td>
+              </tr>
+              <tr>
+                <td>Prix</td>
+                <td><strong>{{ product.price }}</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="container-btn">
+        <div class="container-retour">
+          <a class="retour" (click)="goBack()">Retour</a>
+        </div>
+        <div class="container-retour">
+          <a class="retour" (click)="toModif()">Modifier</a>
+        </div>
+      </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
+    <h4 *ngIf='!product'>
+      <app-loader></app-loader>
+    </h4>
